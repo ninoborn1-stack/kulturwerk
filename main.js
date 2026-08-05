@@ -89,9 +89,18 @@
       } catch (e) {}
     });
     requestAnimationFrame(() => requestAnimationFrame(() => {
-      paths.forEach(p => { p.style.strokeDashoffset = '0'; });
+      paths.forEach(p => {
+        p.style.strokeDashoffset = '0';
+        // Nach dem Zeichnen den Dash entfernen — sonst zeigt Chromium
+        // Pfade mit non-scaling-stroke + voller dasharray nicht an.
+        p.addEventListener('transitionend', (e) => {
+          if (e.propertyName === 'stroke-dashoffset') p.style.strokeDasharray = 'none';
+        }, { once: true });
+      });
       $$('.draw-fill', drawGroup).forEach((f, i) => { f.style.transitionDelay = (0.9 + i * 0.15) + 's'; f.style.opacity = 1; });
     }));
+    // Sicherheits-Fallback: Dash in jedem Fall lösen
+    setTimeout(() => paths.forEach(p => { p.style.strokeDasharray = 'none'; }), 3400);
   }
 
   /* ----- Hero mask-reveal trigger -------------------------------------- */

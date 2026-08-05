@@ -53,157 +53,69 @@
 <!-- ============================ HERO ============================ -->
 <section class="hero">
   <!-- Bildorientierte Architektur-Illustration (Aquarell-Sketch) -->
-  <div class="hero-bg hero-art" data-parallax="0.06" aria-hidden="true">
+  <div class="hero-bg hero-art" data-parallax="0.05" aria-hidden="true">
     <svg viewBox="0 0 1440 820" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
       <defs>
-        <filter id="wc" x="-25%" y="-25%" width="150%" height="150%"><feGaussianBlur stdDeviation="7"/></filter>
-        <filter id="wc-soft" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="14"/></filter>
-        <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stop-color="#B9C7C9"/><stop offset="1" stop-color="#93A6A8"/>
-        </linearGradient>
+        <filter id="wc" x="-25%" y="-25%" width="150%" height="150%"><feGaussianBlur stdDeviation="6"/></filter>
       </defs>
 
-      <!-- ============ AQUARELL-WASHES ============ -->
-      <g filter="url(#wc-soft)">
-        <g class="wash w1">
-          <!-- Laub-Band oben -->
-          <ellipse cx="300" cy="120" rx="260" ry="130" fill="#CBE08A" opacity=".4"/>
-          <ellipse cx="620" cy="80" rx="240" ry="110" fill="#B9D96A" opacity=".36"/>
-          <ellipse cx="1040" cy="110" rx="300" ry="140" fill="#C6DE84" opacity=".38"/>
-          <ellipse cx="1330" cy="90" rx="200" ry="120" fill="#AECB6E" opacity=".34"/>
-        </g>
-      </g>
+      <!-- dezente Washes: Tiefe hinter der Kolonnade + Bodenschatten -->
       <g filter="url(#wc)">
-        <g class="wash w2">
-          <!-- Baumkronen -->
-          <ellipse cx="410" cy="180" rx="185" ry="145" fill="#AECB6E" opacity=".55"/>
-          <ellipse cx="330" cy="150" rx="115" ry="105" fill="#8FB152" opacity=".42"/>
-          <ellipse cx="500" cy="250" rx="115" ry="85" fill="#C6DE84" opacity=".5"/>
-        </g>
-        <g class="wash w3">
-          <!-- Altbau links -->
-          <rect x="34" y="238" width="270" height="238" rx="6" fill="#CFCCC4" opacity=".72"/>
-          <!-- Modernes Gebäude: Obergeschoss -->
-          <polygon points="520,258 1448,338 1448,452 520,438" fill="#B2AEA4" opacity=".92"/>
-          <!-- Dach-Sliver -->
-          <polygon points="520,258 1448,338 1448,320 560,240" fill="#CFCCC4" opacity=".85"/>
-          <!-- Stirnseite links (Schattenseite) -->
-          <polygon points="520,258 468,270 468,452 520,438" fill="#9C9A90" opacity=".9"/>
-          <!-- EG-Rücksprung (Schatten unter Auskragung) -->
-          <polygon points="540,438 1448,452 1448,524 540,548" fill="#6E6D63" opacity=".62"/>
-        </g>
-        <g class="wash w3">
-          <!-- Glas-Felder OG -->
-          <polygon points="640,268 760,279 760,442 640,440" fill="url(#glass)" opacity=".7"/>
-          <polygon points="890,290 1030,302 1030,446 890,444" fill="url(#glass)" opacity=".7"/>
-          <polygon points="1180,315 1330,328 1330,450 1180,448" fill="url(#glass)" opacity=".7"/>
-        </g>
-        <g class="wash w4">
-          <!-- Boden / Platz -->
-          <rect x="0" y="560" width="1440" height="220" fill="#EFE7D8" opacity=".8"/>
-          <!-- Bodenschatten (Erdung des Gebäudes) -->
-          <ellipse cx="1010" cy="560" rx="470" ry="30" fill="#6C6B61" opacity=".32"/>
-          <!-- Vordergrund-Busch dunkel + gelb -->
-          <ellipse cx="120" cy="770" rx="180" ry="120" fill="#2A2A22" opacity=".82"/>
-          <ellipse cx="235" cy="792" rx="90" ry="70" fill="#E7BE38" opacity=".8"/>
-          <ellipse cx="1360" cy="800" rx="180" ry="120" fill="#3A3A2E" opacity=".55"/>
+        <g class="wash w1">
+          <rect x="492" y="316" width="918" height="162" fill="#BCB9B1" opacity=".15"/>
+          <rect x="930" y="350" width="82" height="128" fill="#8E8C83" opacity=".22"/>
+          <ellipse cx="950" cy="550" rx="510" ry="16" fill="#B4B1A8" opacity=".22"/>
+          <ellipse cx="338" cy="560" rx="70" ry="12" fill="#B4B1A8" opacity=".18"/>
         </g>
       </g>
 
-      <!-- ============ LEAF-FLECKS (getupftes Laub) ============ -->
-      <g class="wash w5" fill="none">
-        <g fill="#9DBF57" opacity=".75">
-          <rect x="250" y="70" width="14" height="9" rx="3" transform="rotate(-18 257 74)"/>
-          <rect x="360" y="52" width="15" height="9" rx="3" transform="rotate(12 367 56)"/>
-          <rect x="470" y="96" width="13" height="8" rx="3" transform="rotate(-8 476 100)"/>
-          <rect x="560" y="60" width="15" height="9" rx="3" transform="rotate(20 567 64)"/>
-          <rect x="300" y="150" width="14" height="9" rx="3" transform="rotate(-14 307 154)"/>
-          <rect x="420" y="130" width="13" height="8" rx="3" transform="rotate(8 426 134)"/>
-          <rect x="980" y="70" width="15" height="9" rx="3" transform="rotate(-16 987 74)"/>
-          <rect x="1080" y="48" width="14" height="9" rx="3" transform="rotate(14 1087 52)"/>
-          <rect x="1200" y="92" width="13" height="8" rx="3" transform="rotate(-6 1206 96)"/>
-          <rect x="1310" y="66" width="15" height="9" rx="3" transform="rotate(18 1317 70)"/>
+      <!-- ============ FEDER-SKIZZE (zeichnet sich) ============ -->
+      <g class="ink">
+        <!-- Grundlinie / Platz -->
+        <path d="M40 566 C 400 556 1000 556 1440 566"/>
+        <!-- Stylobat / Sockelstufen -->
+        <path d="M486 478 H1410 M470 500 H1426 M456 520 H1440"/>
+        <!-- Saeulenschaefte (18) -->
+        <path d="M500 478V316 M511 478V316 M552 478V316 M563 478V316 M604 478V316 M615 478V316 M656 478V316 M667 478V316 M708 478V316 M719 478V316 M760 478V316 M771 478V316 M812 478V316 M823 478V316 M864 478V316 M875 478V316 M916 478V316 M927 478V316 M968 478V316 M979 478V316 M1020 478V316 M1031 478V316 M1072 478V316 M1083 478V316 M1124 478V316 M1135 478V316 M1176 478V316 M1187 478V316 M1228 478V316 M1239 478V316 M1280 478V316 M1291 478V316 M1332 478V316 M1343 478V316 M1384 478V316 M1395 478V316"/>
+        <!-- Gebaelk / Kapitell-Linien -->
+        <path d="M492 312 H1406 M492 304 H1406 M490 296 H1408 M486 286 H1410"/>
+        <!-- Attika + Mittelrisalit + Fahnenmast -->
+        <path d="M490 270 H1408 M488 248 H1410 M886 248 L886 214 L1034 214 L1034 248 M960 214 V150"/>
+        <!-- Freitreppe (Mitte) -->
+        <path d="M812 478 L788 558 M1084 478 L1108 558 M806 490 H1090 M798 504 H1098 M790 518 H1106 M782 532 H1114 M774 546 H1122 M766 558 H1130"/>
+      </g>
+
+      <!-- ============ DETAILS (blenden ein) ============ -->
+      <g class="hl">
+        <!-- Dentil-Band unter dem Gesims -->
+        <path d="M492 290 H1406" stroke-width="4" stroke-dasharray="2 9" opacity=".5"/>
+        <!-- Inschrift Mittelrisalit -->
+        <path d="M900 232 H1020" stroke-width="1" opacity=".55"/>
+        <!-- Portal hinter den Mittelsaeulen -->
+        <path d="M936 478 V352 H1006 V478" opacity=".5"/>
+        <!-- Dachfiguren auf der Attika -->
+        <g opacity=".85">
+          <path d="M538 248 h20 v-6 h-20 z M541 242 c2 -15 6 -19 7 -19 c1 0 5 4 7 19"/>
+          <path d="M750 248 h20 v-6 h-20 z M753 242 c2 -15 6 -19 7 -19 c1 0 5 4 7 19"/>
+          <path d="M962 248 h20 v-6 h-20 z M965 242 c2 -16 6 -20 7 -20 c1 0 5 4 7 20"/>
+          <path d="M1174 248 h20 v-6 h-20 z M1177 242 c2 -15 6 -19 7 -19 c1 0 5 4 7 19"/>
+          <path d="M1374 248 h20 v-6 h-20 z M1377 242 c2 -15 6 -19 7 -19 c1 0 5 4 7 19"/>
         </g>
-        <g fill="#E7C24A" opacity=".8">
-          <rect x="330" y="96" width="13" height="8" rx="3" transform="rotate(16 336 100)"/>
-          <rect x="512" y="150" width="12" height="8" rx="3" transform="rotate(-12 518 154)"/>
-          <rect x="1040" y="120" width="13" height="8" rx="3" transform="rotate(10 1046 124)"/>
-          <rect x="1260" y="52" width="12" height="8" rx="3" transform="rotate(-18 1266 56)"/>
-        </g>
+        <!-- Fahne (Gold-Akzent) -->
+        <path d="M960 151 L992 158 L960 169 Z" fill="#A6884F" stroke="none"/>
+        <!-- niedrige Hecke vor dem Sockel -->
+        <path d="M492 476 q13 -9 26 0 q13 -9 26 0 q13 -9 26 0 q13 -9 26 0 q13 -9 26 0 q13 -9 26 0 q13 -9 26 0 q13 -9 26 0 q13 -9 26 0 q13 -9 26 0 q13 -9 26 0" stroke-width="1.1" opacity=".6"/>
+        <path d="M1104 476 q13 -9 26 0 q13 -9 26 0 q13 -9 26 0 q13 -9 26 0 q13 -9 26 0 q13 -9 26 0 q13 -9 26 0 q13 -9 26 0 q13 -9 26 0 q13 -9 26 0 q13 -9 26 0" stroke-width="1.1" opacity=".6"/>
+        <!-- lockere Bodenschraffur -->
+        <path d="M120 592 H520 M60 606 H430 M980 594 H1360 M1010 608 H1400" stroke-width="1" opacity=".26"/>
       </g>
 
-      <!-- ============ TUSCHE-LINIEN ============ -->
-      <!-- Altbau links -->
-      <g class="hl hl1">
-        <path class="draw" d="M40 236 L300 250 L300 472 L40 468 Z"/>
-        <path d="M96 250 V466 M152 251 V468 M208 251 V470 M256 249 V471"/>
-        <path d="M40 304 L300 314 M40 372 L300 380 M40 428 L300 436"/>
-        <path d="M60 266 h22 M120 266 h22 M180 268 h22 M230 268 h20
-                 M60 334 h22 M120 336 h22 M180 338 h22 M230 340 h20
-                 M60 402 h22 M120 404 h22 M180 406 h22 M230 408 h20" stroke-width="1" opacity=".7"/>
-      </g>
-
-      <!-- Bäume -->
-      <g class="hl hl1">
-        <path class="draw" d="M366 556 C 372 440, 358 320, 382 150"/>
-        <path d="M378 300 C 340 262, 316 250, 292 236 M372 250 C 400 214, 430 196, 452 170
-                 M382 210 C 356 176, 340 158, 330 132 M384 180 C 410 156, 430 140, 452 120"/>
-        <path d="M470 470 C 476 400, 470 320, 486 214 M482 300 C 512 270, 540 254, 566 240
-                 M480 250 C 452 220, 440 206, 430 186" opacity=".8"/>
-      </g>
-
-      <!-- Modernes Kulturhaus -->
-      <g class="hl hl2">
-        <!-- Hauptvolumen -->
-        <path class="draw" d="M520 258 L1448 338 M520 438 L1448 452 M520 258 L520 438"/>
-        <path class="draw" d="M520 258 L468 270 L468 452 L520 438 M468 270 L560 240 L1448 320"/>
-        <!-- Attika-Fascia (kräftige Oberkante) -->
-        <path d="M520 272 L1448 350" stroke-width="1.6" opacity=".9"/>
-        <!-- Fassaden-Lamellen OG -->
-        <path d="M520 283 L1448 354 M520 308 L1448 370 M520 334 L1448 386
-                 M520 359 L1448 402 M520 384 L1448 418 M520 409 L1448 434"
-              stroke-width="1.2" opacity=".82"/>
-        <!-- Vertikale Achsen / Pfosten OG -->
-        <path d="M640 268 V440 M760 279 V442 M890 290 V444 M1030 302 V446 M1180 315 V448 M1330 328 V450" stroke-width="1.4" opacity=".95"/>
-      </g>
-
-      <!-- EG: Auskragung, Stützen, Rücksprung -->
-      <g class="hl hl2">
-        <path class="draw" d="M540 548 L1448 524"/>
-        <path d="M590 439 V547 M740 441 V543 M900 444 V538 M1070 446 V534 M1250 449 V529 M1420 451 V525"/>
-        <!-- Eingang links -->
-        <path d="M556 440 V545 M636 440 V546" opacity=".85"/>
-        <path d="M556 486 h80" stroke-width="1" opacity=".6"/>
-      </g>
-
-      <!-- Fenster-Details / Personen im Gebäude -->
-      <g class="hl hl3" opacity=".8">
-        <circle cx="700" cy="360" r="6" fill="#2A2620" stroke="none"/>
-        <circle cx="720" cy="362" r="5" fill="#2A2620" stroke="none"/>
-        <circle cx="955" cy="372" r="6" fill="#2A2620" stroke="none"/>
-        <circle cx="1250" cy="392" r="5" fill="#2A2620" stroke="none"/>
-        <path d="M690 372 h44 M945 384 h40 M1238 402 h34" stroke-width="1" opacity=".5"/>
-      </g>
-
-      <!-- Boden-Linien -->
-      <g class="hl hl2">
-        <path class="draw" d="M40 630 C 400 606, 900 600, 1440 616"/>
-        <path d="M120 690 C 500 664, 1000 660, 1440 676 M60 726 C 500 704, 1050 700, 1440 712" stroke-width="1" opacity=".55"/>
-      </g>
-
-      <!-- ============ FIGUREN ============ -->
-      <g class="hl hl3" stroke="none">
-        <!-- Vordergrund groß -->
-        <g fill="#26221C"><circle cx="250" cy="616" r="16"/><path d="M234 636 q16 -14 32 0 l4 66 q-20 10 -40 0 Z"/></g>
-        <g fill="#E7BE38"><circle cx="332" cy="642" r="14"/><path d="M318 660 q14 -12 28 0 l4 54 q-18 9 -36 0 Z"/></g>
-        <g fill="#26221C"><circle cx="470" cy="612" r="12"/><path d="M458 628 q12 -10 24 0 l3 46 q-15 8 -30 0 Z"/></g>
-        <g fill="#8A857A"><circle cx="560" cy="620" r="11"/><path d="M549 635 q11 -9 22 0 l3 42 q-14 7 -28 0 Z"/></g>
-        <!-- unter/vor dem Gebäude, kleiner -->
-        <g fill="#E7BE38"><circle cx="700" cy="600" r="9"/><path d="M691 613 q9 -8 18 0 l2 36 q-11 6 -22 0 Z"/></g>
-        <g fill="#26221C"><circle cx="792" cy="596" r="8"/><path d="M784 608 q8 -7 16 0 l2 32 q-10 5 -20 0 Z"/></g>
-        <g fill="#8A857A"><circle cx="900" cy="590" r="8"/><path d="M892 601 q8 -7 16 0 l2 30 q-10 5 -20 0 Z"/></g>
-        <g fill="#26221C"><circle cx="1000" cy="586" r="7"/><path d="M993 596 q7 -6 14 0 l2 28 q-9 4 -18 0 Z"/></g>
-        <g fill="#E7BE38"><circle cx="1120" cy="582" r="7"/><path d="M1113 592 q7 -6 14 0 l2 26 q-9 4 -18 0 Z"/></g>
+      <!-- Baum neben dem Museum (locker, wie in der Skizze) -->
+      <g class="hl hl2" opacity=".9">
+        <path d="M452 478 C 456 440 450 404 458 372" stroke-width="1.3"/>
+        <path d="M458 404 C 442 396 432 388 422 380 M460 408 C 476 400 486 392 500 386 M456 424 C 444 420 436 414 426 408" opacity=".75"/>
+        <path d="M424 372 c-12 -16 4 -36 22 -32 c4 -18 34 -20 44 -4 c20 -8 36 10 28 28 c12 12 -2 32 -22 30 c-8 16 -36 14 -44 -2 c-18 4 -34 -12 -28 -26 z" opacity=".8"/>
+        <path d="M434 366 q12 -8 24 -5 M456 358 q13 0 24 8 M438 386 q16 6 34 1" stroke-width="1" opacity=".55"/>
       </g>
     </svg>
   </div>
