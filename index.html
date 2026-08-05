@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kulturwerk der deutschen Schriftsteller*innen e.V. — Wo Literatur ein Zuhause findet</title>
+<meta name="description" content="Das Kulturwerk der deutschen Schriftsteller*innen e.V. fördert das literarische Leben in Deutschland, stärkt Autor*innen und trägt die deutschsprachige Literatur in die Welt.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+<div class="progress" aria-hidden="true"></div>
+
+<!-- ============================ NAV ============================ -->
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html" aria-label="Kulturwerk der deutschen Schriftsteller*innen — Startseite">
+      <svg class="mono" viewBox="0 0 92 108" fill="none" aria-hidden="true">
+        <text x="4"  y="46"  font-family="Cormorant Garamond, serif" font-weight="600" font-size="54" fill="var(--ink)">K</text>
+        <text x="20" y="76"  font-family="Cormorant Garamond, serif" font-weight="600" font-size="54" fill="var(--ink)">W</text>
+        <text x="38" y="104" font-family="Cormorant Garamond, serif" font-weight="600" font-size="54" fill="var(--ink)">S</text>
+        <path d="M70 6 C 60 26, 52 46, 44 70" stroke="url(#nav-quill)" stroke-width="3.4" stroke-linecap="round" fill="none"/>
+        <path d="M66 16 l 9 -3 M62 28 l 10 -3 M58 40 l 10 -3 M54 52 l 9 -3" stroke="url(#nav-quill)" stroke-width="1.5" stroke-linecap="round"/>
+        <defs>
+          <linearGradient id="nav-quill" x1="70" y1="6" x2="44" y2="70" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#C4A86E"/><stop offset="1" stop-color="#7E6534"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      <span class="brand-text">
+        <span class="bt-1">Kulturwerk</span>
+        <span class="bt-2">der deutschen Schriftsteller*innen</span>
+      </span>
+    </a>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Start</a></li>
+        <li><a href="verein.html">Verein</a></li>
+        <li><a href="foerderung.html">Förderung</a></li>
+        <li><a href="verein.html#vorstand">Vorstand</a></li>
+        <li><a href="kontakt.html" class="btn btn-primary">Kontakt</a></li>
+      </ul>
+    </nav>
+    <button class="burger" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- ============================ HERO ============================ -->
+<section class="hero">
+  <!-- Bildorientierte Architektur-Illustration (Aquarell-Sketch) -->
+  <div class="hero-bg hero-art" data-parallax="0.06" aria-hidden="true">
+    <svg viewBox="0 0 1440 820" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <filter id="wc" x="-25%" y="-25%" width="150%" height="150%"><feGaussianBlur stdDeviation="7"/></filter>
+        <filter id="wc-soft" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="14"/></filter>
+        <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#B9C7C9"/><stop offset="1" stop-color="#93A6A8"/>
+        </linearGradient>
+      </defs>
+
+      <!-- ============ AQUARELL-WASHES ============ -->
+      <g filter="url(#wc-soft)">
+        <g class="wash w1">
+          <!-- Laub-Band oben -->
+          <ellipse cx="300" cy="120" rx="260" ry="130" fill="#CBE08A" opacity=".4"/>
+          <ellipse cx="620" cy="80" rx="240" ry="110" fill="#B9D96A" opacity=".36"/>
+          <ellipse cx="1040" cy="110" rx="300" ry="140" fill="#C6DE84" opacity=".38"/>
+          <ellipse cx="1330" cy="90" rx="200" ry="120" fill="#AECB6E" opacity=".34"/>
+        </g>
+      </g>
+      <g filter="url(#wc)">
+        <g class="wash w2">
+          <!-- Baumkronen -->
+          <ellipse cx="410" cy="180" rx="185" ry="145" fill="#AECB6E" opacity=".55"/>
+          <ellipse cx="330" cy="150" rx="115" ry="105" fill="#8FB152" opacity=".42"/>
+          <ellipse cx="500" cy="250" rx="115" ry="85" fill="#C6DE84" opacity=".5"/>
+        </g>
+        <g class="wash w3">
+          <!-- Altbau links -->
+          <rect x="34" y="238" width="270" height="238" rx="6" fill="#CFCCC4" opacity=".72"/>
+          <!-- Modernes Gebäude: Obergeschoss -->
+          <polygon points="520,258 1448,338 1448,452 520,438" fill="#B2AEA4" opacity=".92"/>
+          <!-- Dach-Sliver -->
+          <polygon points="520,258 1448,338 1448,320 560,240" fill="#CFCCC4" opacity=".85"/>
+          <!-- Stirnseite links (Schattenseite) -->
+          <polygon points="520,258 468,270 468,452 520,438" fill="#9C9A90" opacity=".9"/>
+          <!-- EG-Rücksprung (Schatten unter Auskragung) -->
+          <polygon points="540,438 1448,452 1448,524 540,548" fill="#6E6D63" opacity=".62"/>
+        </g>
+        <g class="wash w3">
+          <!-- Glas-Felder OG -->
+          <polygon points="640,268 760,279 760,442 640,440" fill="url(#glass)" opacity=".7"/>
+          <polygon points="890,290 1030,302 1030,446 890,444" fill="url(#glass)" opacity=".7"/>
+          <polygon points="1180,315 1330,328 1330,450 1180,448" fill="url(#glass)" opacity=".7"/>
+        </g>
+        <g class="wash w4">
+          <!-- Boden / Platz -->
+          <rect x="0" y="560" width="1440" height="220" fill="#EFE7D8" opacity=".8"/>
+          <!-- Bodenschatten (Erdung des Gebäudes) -->
+          <ellipse cx="1010" cy="560" rx="470" ry="30" fill="#6C6B61" opacity=".32"/>
+          <!-- Vordergrund-Busch dunkel + gelb -->
+          <ellipse cx="120" cy="770" rx="180" ry="120" fill="#2A2A22" opacity=".82"/>
+          <ellipse cx="235" cy="792" rx="90" ry="70" fill="#E7BE38" opacity=".8"/>
+          <ellipse cx="1360" cy="800" rx="180" ry="120" fill="#3A3A2E" opacity=".55"/>
+        </g>
+      </g>
+
+      <!-- ============ LEAF-FLECKS (getupftes Laub) ============ -->
+      <g class="wash w5" fill="none">
+        <g fill="#9DBF57" opacity=".75">
+          <rect x="250" y="70" width="14" height="9" rx="3" transform="rotate(-18 257 74)"/>
+          <rect x="360" y="52" width="15" height="9" rx="3" transform="rotate(12 367 56)"/>
+          <rect x="470" y="96" width="13" height="8" rx="3" transform="rotate(-8 476 100)"/>
+          <rect x="560" y="60" width="15" height="9" rx="3" transform="rotate(20 567 64)"/>
+          <rect x="300" y="150" width="14" height="9" rx="3" transform="rotate(-14 307 154)"/>
+          <rect x="420" y="130" width="13" height="8" rx="3" transform="rotate(8 426 134)"/>
+          <rect x="980" y="70" width="15" height="9" rx="3" transform="rotate(-16 987 74)"/>
+          <rect x="1080" y="48" width="14" height="9" rx="3" transform="rotate(14 1087 52)"/>
+          <rect x="1200" y="92" width="13" height="8" rx="3" transform="rotate(-6 1206 96)"/>
+          <rect x="1310" y="66" width="15" height="9" rx="3" transform="rotate(18 1317 70)"/>
+        </g>
+        <g fill="#E7C24A" opacity=".8">
+          <rect x="330" y="96" width="13" height="8" rx="3" transform="rotate(16 336 100)"/>
+          <rect x="512" y="150" width="12" height="8" rx="3" transform="rotate(-12 518 154)"/>
+          <rect x="1040" y="120" width="13" height="8" rx="3" transform="rotate(10 1046 124)"/>
+          <rect x="1260" y="52" width="12" height="8" rx="3" transform="rotate(-18 1266 56)"/>
+        </g>
+      </g>
+
+      <!-- ============ TUSCHE-LINIEN ============ -->
+      <!-- Altbau links -->
+      <g class="hl hl1">
+        <path class="draw" d="M40 236 L300 250 L300 472 L40 468 Z"/>
+        <path d="M96 250 V466 M152 251 V468 M208 251 V470 M256 249 V471"/>
+        <path d="M40 304 L300 314 M40 372 L300 380 M40 428 L300 436"/>
+        <path d="M60 266 h22 M120 266 h22 M180 268 h22 M230 268 h20
+                 M60 334 h22 M120 336 h22 M180 338 h22 M230 340 h20
+                 M60 402 h22 M120 404 h22 M180 406 h22 M230 408 h20" stroke-width="1" opacity=".7"/>
+      </g>
+
+      <!-- Bäume -->
+      <g class="hl hl1">
+        <path class="draw" d="M366 556 C 372 440, 358 320, 382 150"/>
+        <path d="M378 300 C 340 262, 316 250, 292 236 M372 250 C 400 214, 430 196, 452 170
+                 M382 210 C 356 176, 340 158, 330 132 M384 180 C 410 156, 430 140, 452 120"/>
+        <path d="M470 470 C 476 400, 470 320, 486 214 M482 300 C 512 270, 540 254, 566 240
+                 M480 250 C 452 220, 440 206, 430 186" opacity=".8"/>
+      </g>
+
+      <!-- Modernes Kulturhaus -->
+      <g class="hl hl2">
+        <!-- Hauptvolumen -->
+        <path class="draw" d="M520 258 L1448 338 M520 438 L1448 452 M520 258 L520 438"/>
+        <path class="draw" d="M520 258 L468 270 L468 452 L520 438 M468 270 L560 240 L1448 320"/>
+        <!-- Attika-Fascia (kräftige Oberkante) -->
+        <path d="M520 272 L1448 350" stroke-width="1.6" opacity=".9"/>
+        <!-- Fassaden-Lamellen OG -->
+        <path d="M520 283 L1448 354 M520 308 L1448 370 M520 334 L1448 386
+                 M520 359 L1448 402 M520 384 L1448 418 M520 409 L1448 434"
+              stroke-width="1.2" opacity=".82"/>
+        <!-- Vertikale Achsen / Pfosten OG -->
+        <path d="M640 268 V440 M760 279 V442 M890 290 V444 M1030 302 V446 M1180 315 V448 M1330 328 V450" stroke-width="1.4" opacity=".95"/>
+      </g>
+
+      <!-- EG: Auskragung, Stützen, Rücksprung -->
+      <g class="hl hl2">
+        <path class="draw" d="M540 548 L1448 524"/>
+        <path d="M590 439 V547 M740 441 V543 M900 444 V538 M1070 446 V534 M1250 449 V529 M1420 451 V525"/>
+        <!-- Eingang links -->
+        <path d="M556 440 V545 M636 440 V546" opacity=".85"/>
+        <path d="M556 486 h80" stroke-width="1" opacity=".6"/>
+      </g>
+
+      <!-- Fenster-Details / Personen im Gebäude -->
+      <g class="hl hl3" opacity=".8">
+        <circle cx="700" cy="360" r="6" fill="#2A2620" stroke="none"/>
+        <circle cx="720" cy="362" r="5" fill="#2A2620" stroke="none"/>
+        <circle cx="955" cy="372" r="6" fill="#2A2620" stroke="none"/>
+        <circle cx="1250" cy="392" r="5" fill="#2A2620" stroke="none"/>
+        <path d="M690 372 h44 M945 384 h40 M1238 402 h34" stroke-width="1" opacity=".5"/>
+      </g>
+
+      <!-- Boden-Linien -->
+      <g class="hl hl2">
+        <path class="draw" d="M40 630 C 400 606, 900 600, 1440 616"/>
+        <path d="M120 690 C 500 664, 1000 660, 1440 676 M60 726 C 500 704, 1050 700, 1440 712" stroke-width="1" opacity=".55"/>
+      </g>
+
+      <!-- ============ FIGUREN ============ -->
+      <g class="hl hl3" stroke="none">
+        <!-- Vordergrund groß -->
+        <g fill="#26221C"><circle cx="250" cy="616" r="16"/><path d="M234 636 q16 -14 32 0 l4 66 q-20 10 -40 0 Z"/></g>
+        <g fill="#E7BE38"><circle cx="332" cy="642" r="14"/><path d="M318 660 q14 -12 28 0 l4 54 q-18 9 -36 0 Z"/></g>
+        <g fill="#26221C"><circle cx="470" cy="612" r="12"/><path d="M458 628 q12 -10 24 0 l3 46 q-15 8 -30 0 Z"/></g>
+        <g fill="#8A857A"><circle cx="560" cy="620" r="11"/><path d="M549 635 q11 -9 22 0 l3 42 q-14 7 -28 0 Z"/></g>
+        <!-- unter/vor dem Gebäude, kleiner -->
+        <g fill="#E7BE38"><circle cx="700" cy="600" r="9"/><path d="M691 613 q9 -8 18 0 l2 36 q-11 6 -22 0 Z"/></g>
+        <g fill="#26221C"><circle cx="792" cy="596" r="8"/><path d="M784 608 q8 -7 16 0 l2 32 q-10 5 -20 0 Z"/></g>
+        <g fill="#8A857A"><circle cx="900" cy="590" r="8"/><path d="M892 601 q8 -7 16 0 l2 30 q-10 5 -20 0 Z"/></g>
+        <g fill="#26221C"><circle cx="1000" cy="586" r="7"/><path d="M993 596 q7 -6 14 0 l2 28 q-9 4 -18 0 Z"/></g>
+        <g fill="#E7BE38"><circle cx="1120" cy="582" r="7"/><path d="M1113 592 q7 -6 14 0 l2 26 q-9 4 -18 0 Z"/></g>
+      </g>
+    </svg>
+  </div>
+
+  <!-- Verlaufs-Schleier: hellt nach links zu Papier auf (Textlesbarkeit) -->
+  <div class="hero-scrim" aria-hidden="true"></div>
+
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow">Kulturwerk der deutschen Schriftsteller*innen&nbsp;e.V.</p>
+      <h1 class="h-xl">
+        <span class="line"><span>Wo Literatur</span></span>
+        <span class="line"><span>ein <span class="shimmer">Zuhause</span></span></span>
+        <span class="line"><span>findet.</span></span>
+      </h1>
+      <p class="hero-sub lead">
+        Ein gemeinnütziger Verein für das literarische Leben in Deutschland:
+        Wir fördern das Schreiben und Übersetzen, stärken Autor*innen und tragen
+        die Literatur über Grenzen hinweg.
+      </p>
+      <div class="hero-cta btns">
+        <a href="verein.html" class="btn btn-primary"><i data-lucide="feather"></i> Der Verein</a>
+        <a href="foerderung.html" class="btn btn-ghost">Unsere Förderung <i data-lucide="arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-hint"><span>Scrollen</span><span class="rail"></span></div>
+</section>
+
+<!-- ============================ AUFTRAG ============================ -->
+<section class="section" id="auftrag">
+  <div class="container split">
+    <div class="split-sticky reveal">
+      <p class="eyebrow">Auftrag</p>
+      <h2 class="h-lg">Ein Haus für das <span class="accent">geschriebene</span> Wort.</h2>
+    </div>
+    <div class="reveal d1">
+      <p class="lead">
+        Das Kulturwerk der deutschen Schriftsteller*innen e.V. wirkt seit
+        Jahrzehnten an der Entwicklung des literarischen Lebens in Deutschland mit —
+        und trägt die deutschsprachige Literatur zugleich in die Welt.
+      </p>
+      <p>
+        Als gemeinnütziger Verein verfolgt das Kulturwerk ausschließlich
+        gemeinnützige Zwecke: die Förderung von Kunst und Kultur im Bereich des
+        literarischen Schreibens und der literarischen Übersetzung. In enger
+        Zusammenarbeit mit dem Verband deutscher Schriftsteller*innen (VS)
+        verantwortet es literarische Projekte, Lesungen und Kongresse.
+      </p>
+      <p>
+        Sein Wirken reicht von der Unterstützung von Autor*innen in sozialen und
+        rechtlichen Fragen über die Förderung von Auslandsaufenthalten bis zur
+        Pflege internationaler wie nationaler Literaturbeziehungen — im Dienst der
+        Verständigung zwischen den Menschen.
+      </p>
+      <p style="margin-top:1.6em"><a href="verein.html" class="textlink">Mehr über den Verein <i data-lucide="arrow-right"></i></a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ STATS ============================ -->
+<section class="section tight paper-2">
+  <div class="container">
+    <div class="stat-grid reveal">
+      <div class="stat">
+        <div class="num" data-count="1969" data-decimals="0">1969</div>
+        <div class="label">Gründung des VS in Köln</div>
+        <div class="desc">Zusammenschluss regionaler Schriftsteller­verbände.</div>
+      </div>
+      <div class="stat">
+        <div class="num" data-count="16" data-suffix="">16</div>
+        <div class="label">Landesverbände</div>
+        <div class="desc">Präsenz in allen deutschen Bundesländern.</div>
+      </div>
+      <div class="stat">
+        <div class="num" data-count="57" data-suffix="">57</div>
+        <div class="label">Jahre Engagement</div>
+        <div class="desc">Für Literatur, Autor*innen und ihre Rechte.</div>
+      </div>
+      <div class="stat">
+        <div class="num" data-count="100" data-suffix="&nbsp;%">100&nbsp;%</div>
+        <div class="label">gemeinnützig</div>
+        <div class="desc">Ausschließlich und unmittelbar dem Gemeinwohl.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ PULL QUOTE ============================ -->
+<section class="section ink">
+  <div class="container">
+    <div class="pullquote reveal measure mx-auto">
+      <span class="mark" aria-hidden="true">&#8220;</span>
+      <blockquote>
+        Literatur ist die freieste Form der Verständigung — wir bewahren ihr den
+        <span class="shimmer">Raum</span>, in dem sie atmen kann.
+      </blockquote>
+      <cite>Aus dem Selbstverständnis des Kulturwerks</cite>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FEATURES ============================ -->
+<section class="section" id="was-wir-tun">
+  <div class="container">
+    <div class="center reveal" style="max-width:640px;margin-inline:auto;margin-bottom:64px">
+      <p class="eyebrow center">Was wir tun</p>
+      <h2 class="h-lg">Drei Wege, Literatur zu <span class="accent">tragen</span>.</h2>
+    </div>
+    <div class="grid-3">
+      <article class="card tilt reveal d1">
+        <div class="icon-circle"><i data-lucide="feather"></i></div>
+        <h3>Literarisches Leben fördern</h3>
+        <p>Wir ermöglichen Lesungen, Projekte und Begegnungen — von der einzelnen
+        Autorenlesung bis zum großen Schriftsteller*innenkongress.</p>
+      </article>
+      <article class="card tilt reveal d2">
+        <div class="icon-circle"><i data-lucide="scale"></i></div>
+        <h3>Autor*innen zur Seite stehen</h3>
+        <p>In sozialen und rechtlichen Fragen unterstützen wir Schreibende und
+        Übersetzende — für faire Bedingungen und gesicherte Existenzen.</p>
+      </article>
+      <article class="card tilt reveal d3">
+        <div class="icon-circle"><i data-lucide="globe"></i></div>
+        <h3>Brücken zwischen Sprachen</h3>
+        <p>Wir pflegen internationale Literaturbeziehungen und fördern
+        Auslandsaufenthalte — im Dienst der Verständigung zwischen den Völkern.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ INK DIVIDER ============================ -->
+<div class="container">
+  <div class="ink-divider" aria-hidden="true">
+    <svg viewBox="0 0 420 24" preserveAspectRatio="none">
+      <path pathLength="1" d="M0 12 H186 M234 12 H420"/>
+      <g class="dot"><path d="M210 4 l3.4 7.6 l7.6 3.4 l-7.6 3.4 l-3.4 7.6 l-3.4 -7.6 l-7.6 -3.4 l7.6 -3.4 Z" fill="var(--gold)" stroke="none"/></g>
+    </svg>
+  </div>
+</div>
+
+<!-- ============================ MARQUEE ============================ -->
+<section class="section tight ink marquee">
+  <div class="marquee-row r1" aria-hidden="true">
+    <span class="fill-gold">Lyrik</span><span class="diamond"></span>
+    <span class="outline">Prosa</span><span class="diamond"></span>
+    <span class="fill-gold">Essay</span><span class="diamond"></span>
+    <span class="outline">Übersetzung</span><span class="diamond"></span>
+    <span class="fill-gold">Lesung</span><span class="diamond"></span>
+    <span class="outline">Debatte</span><span class="diamond"></span>
+    <!-- Duplikat für nahtlose Schleife -->
+    <span class="fill-gold">Lyrik</span><span class="diamond"></span>
+    <span class="outline">Prosa</span><span class="diamond"></span>
+    <span class="fill-gold">Essay</span><span class="diamond"></span>
+    <span class="outline">Übersetzung</span><span class="diamond"></span>
+    <span class="fill-gold">Lesung</span><span class="diamond"></span>
+    <span class="outline">Debatte</span><span class="diamond"></span>
+  </div>
+  <div class="marquee-row r2" style="margin-top:12px" aria-hidden="true">
+    <span class="outline">Freiheit</span><span class="diamond"></span>
+    <span class="fill-gold">Verständigung</span><span class="diamond"></span>
+    <span class="outline">Kultur</span><span class="diamond"></span>
+    <span class="fill-gold">Sprache</span><span class="diamond"></span>
+    <span class="outline">Zukunft</span><span class="diamond"></span>
+    <span class="outline">Freiheit</span><span class="diamond"></span>
+    <span class="fill-gold">Verständigung</span><span class="diamond"></span>
+    <span class="outline">Kultur</span><span class="diamond"></span>
+    <span class="fill-gold">Sprache</span><span class="diamond"></span>
+    <span class="outline">Zukunft</span><span class="diamond"></span>
+  </div>
+</section>
+
+<!-- ============================ CTA ============================ -->
+<section class="section">
+  <div class="container cta reveal measure mx-auto">
+    <p class="eyebrow center">Mitwirken</p>
+    <h2 class="h-lg">Werden Sie Teil einer <span class="accent">literarischen</span> Gemeinschaft.</h2>
+    <p class="lead" style="margin:20px auto 34px;max-width:56ch">
+      Ob Autor*in, Übersetzer*in oder Freund*in der Literatur — Ihre
+      Unterstützung hält den Raum offen, in dem das geschriebene Wort lebt.
+    </p>
+    <div class="btns" style="justify-content:center">
+      <a href="kontakt.html" class="btn btn-primary"><i data-lucide="mail"></i> Kontakt aufnehmen</a>
+      <a href="foerderung.html" class="btn btn-ghost">Förderung entdecken <i data-lucide="arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="index.html" style="margin-bottom:22px">
+          <svg class="mono" viewBox="0 0 92 108" fill="none" aria-hidden="true">
+            <text x="4"  y="46"  font-family="Cormorant Garamond, serif" font-weight="600" font-size="54" fill="#FAF7F1">K</text>
+            <text x="20" y="76"  font-family="Cormorant Garamond, serif" font-weight="600" font-size="54" fill="#FAF7F1">W</text>
+            <text x="38" y="104" font-family="Cormorant Garamond, serif" font-weight="600" font-size="54" fill="#FAF7F1">S</text>
+            <path d="M70 6 C 60 26, 52 46, 44 70" stroke="url(#f-quill)" stroke-width="3.4" stroke-linecap="round" fill="none"/>
+            <defs><linearGradient id="f-quill" x1="70" y1="6" x2="44" y2="70" gradientUnits="userSpaceOnUse"><stop stop-color="#C4A86E"/><stop offset="1" stop-color="#7E6534"/></linearGradient></defs>
+          </svg>
+          <span class="brand-text">
+            <span class="bt-1">Kulturwerk</span>
+            <span class="bt-2">der deutschen Schriftsteller*innen&nbsp;e.V.</span>
+          </span>
+        </a>
+        <p class="muted" style="max-width:38ch;color:rgba(250,247,241,.6);font-size:1rem">
+          Für das literarische Leben in Deutschland — und für die Literatur in der Welt.
+        </p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Start</a></li>
+          <li><a href="verein.html">Der Verein</a></li>
+          <li><a href="foerderung.html">Förderung</a></li>
+          <li><a href="verein.html#vorstand">Vorstand</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Verbund</h4>
+        <ul>
+          <li><a href="https://vs.verdi.de/" target="_blank" rel="noopener">Verband deutscher Schriftsteller*innen</a></li>
+          <li><a href="https://www.verdi.de/kunst-kultur/literatur" target="_blank" rel="noopener">ver.di — Kunst & Kultur</a></li>
+          <li><a href="kontakt.html">Presse & Anfragen</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="footer-note">
+      <strong>Hinweis.</strong> Dieser Webauftritt ist ein gestalterisches
+      Konzept für das Kulturwerk der deutschen Schriftsteller*innen e.V. Die Inhalte
+      beruhen auf öffentlich zugänglichen Informationen zum Verein und zum
+      Verband deutscher Schriftsteller*innen (VS in ver.di). Namen aktueller
+      Vorstands­mitglieder und konkrete Kontaktdaten sind vor einer
+      Veröffentlichung mit dem Verein abzustimmen. Es handelt sich nicht um den
+      offiziellen Internetauftritt des Vereins.
+    </p>
+
+    <div class="footer-bottom">
+      <span>&copy; <span data-year>2026</span> Kulturwerk der deutschen Schriftsteller*innen e.V. — Konzept</span>
+      <span>Gemeinnütziger Verein · e.V.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
