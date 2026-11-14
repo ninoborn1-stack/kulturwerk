@@ -37,6 +37,14 @@
 
   /* ---------- Reveal on scroll (IntersectionObserver) ---------- */
   var revealEls = $$('.reveal, .rise, .img-reveal');
+  function revealInView() {
+    for (var k = 0; k < revealEls.length; k++) {
+      var el = revealEls[k];
+      if (el.classList.contains('in')) continue;
+      var r = el.getBoundingClientRect();
+      if (r.top < innerHeight * 0.92 && r.bottom > -60) el.classList.add('in');
+    }
+  }
   if (reduce || !('IntersectionObserver' in window)) {
     revealEls.forEach(function (el) { el.classList.add('in'); });
   } else {
@@ -44,7 +52,11 @@
       es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
     }, { threshold: 0.18, rootMargin: '0px 0px -8% 0px' });
     revealEls.forEach(function (el) { io.observe(el); });
-    // Failsafe: Page-Hero-Überschrift/Lead immer sichtbar machen
+    // Fallback: falls der Observer verzögert/aussetzt, beim Laden & Scrollen alles Sichtbare zeigen
+    addEventListener('scroll', revealInView, { passive: true });
+    addEventListener('load', revealInView);
+    setTimeout(revealInView, 900);
+    // Page-Hero-Überschrift/Lead immer sichtbar machen
     setTimeout(function () { $$('.page-hero .rise, .page-hero .reveal').forEach(function (el) { el.classList.add('in'); }); }, 700);
   }
 
