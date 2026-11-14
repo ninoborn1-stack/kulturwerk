@@ -9,8 +9,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
-<link rel="icon" href="assets/brand/kulturwerk-farbe.png">
-<script>(function(){ if(!matchMedia('(prefers-reduced-motion: reduce)').matches){ document.documentElement.classList.add('intro'); } })();</script>
+<link rel="icon" href="assets/brand/favicon.png">
+<link rel="preload" as="image" href="assets/img/hero-main.webp" fetchpriority="high">
+<link rel="preload" as="image" href="assets/brand/kulturwerk-farbe.webp">
+<link rel="preload" as="image" href="assets/brand/kulturwerk-weiss.webp">
+<script>(function(){try{var r=matchMedia('(prefers-reduced-motion: reduce)').matches;if(!r&&!sessionStorage.getItem('kw_hero')){document.documentElement.classList.add('intro');}}catch(e){}})();</script>
 </head>
 <body class="theme-orange">
 
@@ -20,8 +23,8 @@
 <header class="nav">
   <div class="wrap nav-in">
     <a class="brand" href="index.html" aria-label="Kulturwerk — Startseite">
-      <img class="logo-light" src="assets/brand/kulturwerk-weiss.png" alt="Kulturwerk">
-      <img class="logo-dark" src="assets/brand/kulturwerk-farbe.png" alt="Kulturwerk">
+      <img class="logo-light" src="assets/brand/kulturwerk-weiss.webp" alt="Kulturwerk">
+      <img class="logo-dark" src="assets/brand/kulturwerk-farbe.webp" alt="Kulturwerk">
     </a>
     <nav>
       <ul class="menu">
@@ -39,15 +42,15 @@
 <!-- ======================= HERO ======================= -->
 <section class="hero">
   <div class="hero-media">
-    <img class="img-1" src="assets/img/hero-main.jpg" alt="Bibliothek">
-    <img class="img-2" src="assets/img/hero-writing.jpg" alt="">
+    <img class="img-1" src="assets/img/hero-main.webp" alt="Bibliothek" fetchpriority="high" decoding="async">
+    <img class="img-2" src="assets/img/hero-writing.webp" alt="" loading="lazy" decoding="async">
   </div>
   <div class="hero-shade" aria-hidden="true"></div>
   <div class="hero-splatter" aria-hidden="true"></div>
-  <div class="hero-cream" aria-hidden="true"><img src="assets/brand/kulturwerk-farbe.png" alt=""></div>
+  <div class="hero-cream" aria-hidden="true"><img src="assets/brand/kulturwerk-farbe.webp" alt=""></div>
 
   <div class="wrap hero-in">
-    <img class="hero-logo" src="assets/brand/kulturwerk-weiss.png" alt="Kulturwerk — Berliner Schriftstellerinnen und Schriftsteller e.V.">
+    <img class="hero-logo" src="assets/brand/kulturwerk-weiss.webp" alt="Kulturwerk — Berliner Schriftstellerinnen und Schriftsteller e.V.">
     <p class="hero-tag">Wo die Literatur Berlins ihre <em>Stimme</em> findet.</p>
     <div class="btns">
       <a href="ueber-uns.html" class="btn btn-primary"><i data-lucide="feather"></i> Über den Verein</a>
@@ -77,7 +80,7 @@
       <p class="lead">Das Kulturwerk — Berliner Schriftstellerinnen und Schriftsteller e.V. gestaltet das literarische Leben der Hauptstadt mit: Wir fördern das Schreiben und Übersetzen, stärken Autor*innen in sozialen und rechtlichen Fragen und tragen Literatur dorthin, wo sie gehört wird — auf Bühnen, in Kieze, in die Debatte.</p>
       <p>Als gemeinnütziger Verein verstehen wir uns als Haus für viele Stimmen: laut und leise, etabliert und beginnend, in jeder Sprache, die in Berlin geschrieben wird. Wir vernetzen, vermitteln und machen sichtbar — und arbeiten eng mit dem Verband deutscher Schriftsteller*innen (VS) und der Literaturszene der Stadt zusammen.</p>
       <div class="img-reveal duo" style="aspect-ratio:16/10;margin-top:2rem;border-radius:1.2rem">
-        <img src="assets/img/hero-writing.jpg" alt="Handschrift mit Füllfeder">
+        <img src="assets/img/hero-writing.webp" alt="Handschrift mit Füllfeder">
       </div>
     </div>
   </div>
@@ -143,7 +146,7 @@
 <section class="section">
   <div class="wrap split">
     <div class="img-reveal duo theme-purple" style="aspect-ratio:4/5;border-radius:1.4rem">
-      <img src="assets/img/ink.jpg" alt="Füllfeder und Tinte">
+      <img src="assets/img/ink.webp" alt="Füllfeder und Tinte">
     </div>
     <div class="reveal">
       <p class="over">Förderprojekte</p>
@@ -204,7 +207,7 @@
     <div class="brand-line"></div>
     <div class="footer-grid">
       <div>
-        <img class="f-logo" src="assets/brand/kulturwerk-weiss.png" alt="Kulturwerk">
+        <img class="f-logo" src="assets/brand/kulturwerk-weiss.webp" alt="Kulturwerk">
         <p style="max-width:34ch;color:var(--on-ink-soft)">Berliner Schriftstellerinnen und Schriftsteller e.V. — für das literarische Leben der Stadt.</p>
       </div>
       <div>

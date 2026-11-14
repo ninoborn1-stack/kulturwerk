@@ -25,6 +25,7 @@
     burger.addEventListener('click', function () {
       var open = burger.classList.toggle('open');
       menu.classList.toggle('open', open);
+      document.body.classList.toggle('nav-open', open);
       document.body.style.overflow = open ? 'hidden' : '';
     });
     $$('.menu a').forEach(function (a) {
@@ -110,10 +111,19 @@
     var c = $('.hero-cream'); if (c) c.style.display = 'none';
   }
 
-  if (hero && window.gsap && !reduce && html.classList.contains('intro')) {
+  function imgReady(sel) {
+    var img = $(sel);
+    return new Promise(function (res) {
+      if (!img || (img.complete && img.naturalWidth)) return res();
+      img.addEventListener('load', res, { once: true });
+      img.addEventListener('error', res, { once: true });
+    });
+  }
+
+  function buildHero() {
     var g = window.gsap;
     g.set('.hero-media', { clipPath: 'circle(0% at 50% 42%)' });
-    g.set('.hero-media .img-1', { scale: 1.35 });
+    g.set('.hero-media .img-1', { scale: 1.3 });
     g.set('.hero-shade', { opacity: 0 });
     g.set('.hero-in', { opacity: 1 });
     g.set(['.hero-logo', '.hero-tag', '.hero .btns', '.hero-foot'], { opacity: 0 });
@@ -122,30 +132,35 @@
 
     var tl = g.timeline({ defaults: { ease: 'power3.out' }, onComplete: heroDone });
     heroTl = tl;
-    tl.fromTo('.hero-cream img', { opacity: 0, scale: 0.86, rotate: -6 }, { opacity: 1, scale: 1, rotate: 0, duration: 1.1, ease: 'expo.out' }, 0)
-      .to('.hero-media', { clipPath: 'circle(150% at 50% 42%)', duration: 2.0, ease: 'expo.inOut' }, 0.8)
-      .to('.hero-media .img-1', { scale: 1.08, duration: 2.6, ease: 'expo.out' }, 0.8)
-      .to('.hero-cream img', { scale: 3.2, opacity: 0, rotate: 10, duration: 1.3, ease: 'expo.in' }, 0.95)
-      .to('.hero-cream', { opacity: 0, duration: 1.0, ease: 'power2.inOut' }, 1.15)
+    // Logo liegt bereits sichtbar auf dem Cremegrund — direkt die Blüte öffnen (kein Flash).
+    tl.to('.hero-media', { clipPath: 'circle(150% at 50% 42%)', duration: 1.9, ease: 'expo.inOut' }, 0.35)
+      .to('.hero-media .img-1', { scale: 1.06, duration: 2.5, ease: 'expo.out' }, 0.35)
+      .to('.hero-cream img', { scale: 3, opacity: 0, rotate: 8, duration: 1.2, ease: 'expo.in' }, 0.5)
+      .to('.hero-cream', { opacity: 0, duration: 0.9, ease: 'power2.inOut' }, 0.7)
       .set('.hero-cream', { display: 'none' })
       .fromTo('.hero-splatter span', { x: 0, y: 0, scale: 0, opacity: 1 },
-        { x: function (i, t) { return +t.dataset.x; }, y: function (i, t) { return +t.dataset.y; }, scale: 1, rotate: function (i) { return i * 23; }, duration: 1.4, ease: 'expo.out', stagger: { each: 0.012 } }, 1.0)
-      .to('.hero-splatter span', { opacity: 0, duration: 1.1, ease: 'power2.in' }, 2.0)
-      .fromTo('.hero-shade', { opacity: 0 }, { opacity: 1, duration: 1.2, ease: 'power2.out' }, 1.7)
-      .fromTo('.hero-logo', { opacity: 0, y: 46, scale: 0.96 }, { opacity: 1, y: 0, scale: 1, duration: 1.2, ease: 'expo.out' }, 1.95)
-      .fromTo('.hero-tag', { opacity: 0, y: 26 }, { opacity: 1, y: 0, duration: 1.0, ease: 'expo.out' }, 2.2)
-      .fromTo('.hero .btns', { opacity: 0, y: 26 }, { opacity: 1, y: 0, duration: 1.0, ease: 'expo.out' }, 2.34)
-      .fromTo('.nav', { opacity: 0, y: -14 }, { opacity: 1, y: 0, duration: 0.9, ease: 'power2.out' }, 2.0)
-      .fromTo('.hero-foot', { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.9, ease: 'power2.out' }, 2.45);
+        { x: function (i, t) { return +t.dataset.x; }, y: function (i, t) { return +t.dataset.y; }, scale: 1, rotate: function (i) { return i * 23; }, duration: 1.3, ease: 'expo.out', stagger: { each: 0.012 } }, 0.55)
+      .to('.hero-splatter span', { opacity: 0, duration: 1.0, ease: 'power2.in' }, 1.5)
+      .fromTo('.hero-shade', { opacity: 0 }, { opacity: 1, duration: 1.1, ease: 'power2.out' }, 1.25)
+      .fromTo('.hero-logo', { opacity: 0, y: 46, scale: 0.96 }, { opacity: 1, y: 0, scale: 1, duration: 1.1, ease: 'expo.out' }, 1.5)
+      .fromTo('.hero-tag', { opacity: 0, y: 26 }, { opacity: 1, y: 0, duration: 0.9, ease: 'expo.out' }, 1.75)
+      .fromTo('.hero .btns', { opacity: 0, y: 26 }, { opacity: 1, y: 0, duration: 0.9, ease: 'expo.out' }, 1.9)
+      .fromTo('.nav', { opacity: 0, y: -14 }, { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out' }, 1.55)
+      .fromTo('.hero-foot', { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out' }, 2.0);
 
-    // Ungeduld wird belohnt
     var sped = false;
-    function speed() { if (!sped) { sped = true; tl.timeScale(5); } }
-    ['wheel', 'touchstart', 'keydown', 'pointerdown'].forEach(function (ev) {
-      addEventListener(ev, speed, { once: true, passive: true });
-    });
-    // Sicherheitsnetz
-    setTimeout(heroDone, 6000);
+    function speed() { if (!sped) { sped = true; tl.timeScale(4.5); } }
+    ['wheel', 'touchstart', 'keydown', 'pointerdown'].forEach(function (ev) { addEventListener(ev, speed, { once: true, passive: true }); });
+    setTimeout(heroDone, 6500);
+  }
+
+  if (hero && window.gsap && !reduce && html.classList.contains('intro')) {
+    try { sessionStorage.setItem('kw_hero', '1'); } catch (e) {}
+    // Intro erst starten, wenn die Schlüsselbilder geladen sind (max. 2,6 s Wartezeit).
+    Promise.race([
+      Promise.all([imgReady('.hero-media .img-1'), imgReady('.hero-cream img'), imgReady('.hero-logo')]),
+      new Promise(function (r) { setTimeout(r, 2600); })
+    ]).then(buildHero);
   } else {
     heroDone();
   }
