@@ -1,48 +1,34 @@
 <!DOCTYPE html>
-<html lang="de" data-theme="light">
+<html lang="de">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kulturwerk der deutschen Schriftsteller*innen e.V. — Wo Literatur ein Zuhause findet</title>
-<meta name="description" content="Das Kulturwerk der deutschen Schriftsteller*innen e.V. fördert das literarische Leben in Deutschland, stärkt Autor*innen und trägt die deutschsprachige Literatur in die Welt.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kulturwerk — Berliner Schriftstellerinnen und Schriftsteller e.V.</title>
+<meta name="description" content="Das Kulturwerk — Berliner Schriftstellerinnen und Schriftsteller e.V. fördert das literarische Leben Berlins: Lesungen, Projekte, Förderung und eine starke Stimme für Autor*innen.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
-<script src="https://unpkg.com/lucide@latest"></script>
+<link rel="icon" href="assets/brand/kulturwerk-farbe.png">
+<script>(function(){ if(!matchMedia('(prefers-reduced-motion: reduce)').matches){ document.documentElement.classList.add('intro'); } })();</script>
 </head>
-<body>
+<body class="theme-orange">
 
 <div class="progress" aria-hidden="true"></div>
 
-<!-- ============================ NAV ============================ -->
+<!-- ======================= NAV ======================= -->
 <header class="nav">
-  <div class="container nav-inner">
-    <a class="brand" href="index.html" aria-label="Kulturwerk der deutschen Schriftsteller*innen — Startseite">
-      <svg class="mono" viewBox="0 0 92 108" fill="none" aria-hidden="true">
-        <text x="4"  y="46"  font-family="Cormorant Garamond, serif" font-weight="600" font-size="54" fill="var(--ink)">K</text>
-        <text x="20" y="76"  font-family="Cormorant Garamond, serif" font-weight="600" font-size="54" fill="var(--ink)">W</text>
-        <text x="38" y="104" font-family="Cormorant Garamond, serif" font-weight="600" font-size="54" fill="var(--ink)">S</text>
-        <path d="M70 6 C 60 26, 52 46, 44 70" stroke="url(#nav-quill)" stroke-width="3.4" stroke-linecap="round" fill="none"/>
-        <path d="M66 16 l 9 -3 M62 28 l 10 -3 M58 40 l 10 -3 M54 52 l 9 -3" stroke="url(#nav-quill)" stroke-width="1.5" stroke-linecap="round"/>
-        <defs>
-          <linearGradient id="nav-quill" x1="70" y1="6" x2="44" y2="70" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#C4A86E"/><stop offset="1" stop-color="#7E6534"/>
-          </linearGradient>
-        </defs>
-      </svg>
-      <span class="brand-text">
-        <span class="bt-1">Kulturwerk</span>
-        <span class="bt-2">der deutschen Schriftsteller*innen</span>
-      </span>
+  <div class="wrap nav-in">
+    <a class="brand" href="index.html" aria-label="Kulturwerk — Startseite">
+      <img class="logo-light" src="assets/brand/kulturwerk-weiss.png" alt="Kulturwerk">
+      <img class="logo-dark" src="assets/brand/kulturwerk-farbe.png" alt="Kulturwerk">
     </a>
-
     <nav>
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">Start</a></li>
-        <li><a href="verein.html">Verein</a></li>
-        <li><a href="foerderung.html">Förderung</a></li>
-        <li><a href="verein.html#vorstand">Vorstand</a></li>
+      <ul class="menu">
+        <li><a href="ueber-uns.html">Über uns</a></li>
+        <li><a href="foerdermitglieder.html">Fördermitglieder</a></li>
+        <li><a href="foerderprojekte.html">Förderprojekte</a></li>
+        <li><a href="veranstaltungen.html">Veranstaltungen</a></li>
         <li><a href="kontakt.html" class="btn btn-primary">Kontakt</a></li>
       </ul>
     </nav>
@@ -50,321 +36,213 @@
   </div>
 </header>
 
-<!-- ============================ HERO ============================ -->
+<!-- ======================= HERO ======================= -->
 <section class="hero">
-  <!-- Bildorientierte Architektur-Illustration (Aquarell-Sketch) -->
-  <div class="hero-bg hero-art" data-parallax="0.05" aria-hidden="true">
-    <svg viewBox="0 0 1440 820" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <filter id="wc" x="-25%" y="-25%" width="150%" height="150%"><feGaussianBlur stdDeviation="6"/></filter>
-      </defs>
-
-      <!-- dezente Washes: Tiefe hinter der Kolonnade + Bodenschatten -->
-      <g filter="url(#wc)">
-        <g class="wash w1">
-          <rect x="492" y="316" width="918" height="162" fill="#BCB9B1" opacity=".15"/>
-          <rect x="930" y="350" width="82" height="128" fill="#8E8C83" opacity=".22"/>
-          <ellipse cx="950" cy="550" rx="510" ry="16" fill="#B4B1A8" opacity=".22"/>
-          <ellipse cx="338" cy="560" rx="70" ry="12" fill="#B4B1A8" opacity=".18"/>
-        </g>
-      </g>
-
-      <!-- ============ FEDER-SKIZZE (zeichnet sich) ============ -->
-      <g class="ink">
-        <!-- Grundlinie / Platz -->
-        <path d="M40 566 C 400 556 1000 556 1440 566"/>
-        <!-- Stylobat / Sockelstufen -->
-        <path d="M486 478 H1410 M470 500 H1426 M456 520 H1440"/>
-        <!-- Saeulenschaefte (18) -->
-        <path d="M500 478V316 M511 478V316 M552 478V316 M563 478V316 M604 478V316 M615 478V316 M656 478V316 M667 478V316 M708 478V316 M719 478V316 M760 478V316 M771 478V316 M812 478V316 M823 478V316 M864 478V316 M875 478V316 M916 478V316 M927 478V316 M968 478V316 M979 478V316 M1020 478V316 M1031 478V316 M1072 478V316 M1083 478V316 M1124 478V316 M1135 478V316 M1176 478V316 M1187 478V316 M1228 478V316 M1239 478V316 M1280 478V316 M1291 478V316 M1332 478V316 M1343 478V316 M1384 478V316 M1395 478V316"/>
-        <!-- Gebaelk / Kapitell-Linien -->
-        <path d="M492 312 H1406 M492 304 H1406 M490 296 H1408 M486 286 H1410"/>
-        <!-- Attika + Mittelrisalit + Fahnenmast -->
-        <path d="M490 270 H1408 M488 248 H1410 M886 248 L886 214 L1034 214 L1034 248 M960 214 V150"/>
-        <!-- Freitreppe (Mitte) -->
-        <path d="M812 478 L788 558 M1084 478 L1108 558 M806 490 H1090 M798 504 H1098 M790 518 H1106 M782 532 H1114 M774 546 H1122 M766 558 H1130"/>
-      </g>
-
-      <!-- ============ DETAILS (blenden ein) ============ -->
-      <g class="hl">
-        <!-- Dentil-Band unter dem Gesims -->
-        <path d="M492 290 H1406" stroke-width="4" stroke-dasharray="2 9" opacity=".5"/>
-        <!-- Inschrift Mittelrisalit -->
-        <path d="M900 232 H1020" stroke-width="1" opacity=".55"/>
-        <!-- Portal hinter den Mittelsaeulen -->
-        <path d="M936 478 V352 H1006 V478" opacity=".5"/>
-        <!-- Dachfiguren auf der Attika -->
-        <g opacity=".85">
-          <path d="M538 248 h20 v-6 h-20 z M541 242 c2 -15 6 -19 7 -19 c1 0 5 4 7 19"/>
-          <path d="M750 248 h20 v-6 h-20 z M753 242 c2 -15 6 -19 7 -19 c1 0 5 4 7 19"/>
-          <path d="M962 248 h20 v-6 h-20 z M965 242 c2 -16 6 -20 7 -20 c1 0 5 4 7 20"/>
-          <path d="M1174 248 h20 v-6 h-20 z M1177 242 c2 -15 6 -19 7 -19 c1 0 5 4 7 19"/>
-          <path d="M1374 248 h20 v-6 h-20 z M1377 242 c2 -15 6 -19 7 -19 c1 0 5 4 7 19"/>
-        </g>
-        <!-- Fahne (Gold-Akzent) -->
-        <path d="M960 151 L992 158 L960 169 Z" fill="#A6884F" stroke="none"/>
-        <!-- niedrige Hecke vor dem Sockel -->
-        <path d="M492 476 q13 -9 26 0 q13 -9 26 0 q13 -9 26 0 q13 -9 26 0 q13 -9 26 0 q13 -9 26 0 q13 -9 26 0 q13 -9 26 0 q13 -9 26 0 q13 -9 26 0 q13 -9 26 0" stroke-width="1.1" opacity=".6"/>
-        <path d="M1104 476 q13 -9 26 0 q13 -9 26 0 q13 -9 26 0 q13 -9 26 0 q13 -9 26 0 q13 -9 26 0 q13 -9 26 0 q13 -9 26 0 q13 -9 26 0 q13 -9 26 0 q13 -9 26 0" stroke-width="1.1" opacity=".6"/>
-        <!-- lockere Bodenschraffur -->
-        <path d="M120 592 H520 M60 606 H430 M980 594 H1360 M1010 608 H1400" stroke-width="1" opacity=".26"/>
-      </g>
-
-      <!-- Baum neben dem Museum (locker, wie in der Skizze) -->
-      <g class="hl hl2" opacity=".9">
-        <path d="M452 478 C 456 440 450 404 458 372" stroke-width="1.3"/>
-        <path d="M458 404 C 442 396 432 388 422 380 M460 408 C 476 400 486 392 500 386 M456 424 C 444 420 436 414 426 408" opacity=".75"/>
-        <path d="M424 372 c-12 -16 4 -36 22 -32 c4 -18 34 -20 44 -4 c20 -8 36 10 28 28 c12 12 -2 32 -22 30 c-8 16 -36 14 -44 -2 c-18 4 -34 -12 -28 -26 z" opacity=".8"/>
-        <path d="M434 366 q12 -8 24 -5 M456 358 q13 0 24 8 M438 386 q16 6 34 1" stroke-width="1" opacity=".55"/>
-      </g>
-    </svg>
+  <div class="hero-media">
+    <img class="img-1" src="assets/img/hero-main.jpg" alt="Bibliothek">
+    <img class="img-2" src="assets/img/hero-writing.jpg" alt="">
   </div>
+  <div class="hero-shade" aria-hidden="true"></div>
+  <div class="hero-splatter" aria-hidden="true"></div>
+  <div class="hero-cream" aria-hidden="true"><img src="assets/brand/kulturwerk-farbe.png" alt=""></div>
 
-  <!-- Verlaufs-Schleier: hellt nach links zu Papier auf (Textlesbarkeit) -->
-  <div class="hero-scrim" aria-hidden="true"></div>
-
-  <div class="container hero-inner">
-    <div class="hero-copy">
-      <p class="eyebrow">Kulturwerk der deutschen Schriftsteller*innen&nbsp;e.V.</p>
-      <h1 class="h-xl">
-        <span class="line"><span>Wo Literatur</span></span>
-        <span class="line"><span>ein <span class="shimmer">Zuhause</span></span></span>
-        <span class="line"><span>findet.</span></span>
-      </h1>
-      <p class="hero-sub lead">
-        Ein gemeinnütziger Verein für das literarische Leben in Deutschland:
-        Wir fördern das Schreiben und Übersetzen, stärken Autor*innen und tragen
-        die Literatur über Grenzen hinweg.
-      </p>
-      <div class="hero-cta btns">
-        <a href="verein.html" class="btn btn-primary"><i data-lucide="feather"></i> Der Verein</a>
-        <a href="foerderung.html" class="btn btn-ghost">Unsere Förderung <i data-lucide="arrow-right"></i></a>
-      </div>
+  <div class="wrap hero-in">
+    <img class="hero-logo" src="assets/brand/kulturwerk-weiss.png" alt="Kulturwerk — Berliner Schriftstellerinnen und Schriftsteller e.V.">
+    <p class="hero-tag">Wo die Literatur Berlins ihre <em>Stimme</em> findet.</p>
+    <div class="btns">
+      <a href="ueber-uns.html" class="btn btn-primary"><i data-lucide="feather"></i> Über den Verein</a>
+      <a href="veranstaltungen.html" class="btn">Veranstaltungen <i data-lucide="arrow-right"></i></a>
     </div>
   </div>
 
-  <div class="scroll-hint"><span>Scrollen</span><span class="rail"></span></div>
-</section>
-
-<!-- ============================ AUFTRAG ============================ -->
-<section class="section" id="auftrag">
-  <div class="container split">
-    <div class="split-sticky reveal">
-      <p class="eyebrow">Auftrag</p>
-      <h2 class="h-lg">Ein Haus für das <span class="accent">geschriebene</span> Wort.</h2>
-    </div>
-    <div class="reveal d1">
-      <p class="lead">
-        Das Kulturwerk der deutschen Schriftsteller*innen e.V. wirkt seit
-        Jahrzehnten an der Entwicklung des literarischen Lebens in Deutschland mit —
-        und trägt die deutschsprachige Literatur zugleich in die Welt.
-      </p>
-      <p>
-        Als gemeinnütziger Verein verfolgt das Kulturwerk ausschließlich
-        gemeinnützige Zwecke: die Förderung von Kunst und Kultur im Bereich des
-        literarischen Schreibens und der literarischen Übersetzung. In enger
-        Zusammenarbeit mit dem Verband deutscher Schriftsteller*innen (VS)
-        verantwortet es literarische Projekte, Lesungen und Kongresse.
-      </p>
-      <p>
-        Sein Wirken reicht von der Unterstützung von Autor*innen in sozialen und
-        rechtlichen Fragen über die Förderung von Auslandsaufenthalten bis zur
-        Pflege internationaler wie nationaler Literaturbeziehungen — im Dienst der
-        Verständigung zwischen den Menschen.
-      </p>
-      <p style="margin-top:1.6em"><a href="verein.html" class="textlink">Mehr über den Verein <i data-lucide="arrow-right"></i></a></p>
-    </div>
+  <div class="wrap hero-foot">
+    <span class="scroll"><span class="rail"></span> Scrollen</span>
+    <span class="tags"><b>Berlin</b> &nbsp;·&nbsp; Gemeinnütziger Verein &nbsp;·&nbsp; <b>Schriftstellerinnen &amp; Schriftsteller</b></span>
   </div>
 </section>
 
-<!-- ============================ STATS ============================ -->
-<section class="section tight paper-2">
-  <div class="container">
-    <div class="stat-grid reveal">
-      <div class="stat">
-        <div class="num" data-count="1969" data-decimals="0">1969</div>
-        <div class="label">Gründung des VS in Köln</div>
-        <div class="desc">Zusammenschluss regionaler Schriftsteller­verbände.</div>
-      </div>
-      <div class="stat">
-        <div class="num" data-count="16" data-suffix="">16</div>
-        <div class="label">Landesverbände</div>
-        <div class="desc">Präsenz in allen deutschen Bundesländern.</div>
-      </div>
-      <div class="stat">
-        <div class="num" data-count="57" data-suffix="">57</div>
-        <div class="label">Jahre Engagement</div>
-        <div class="desc">Für Literatur, Autor*innen und ihre Rechte.</div>
-      </div>
-      <div class="stat">
-        <div class="num" data-count="100" data-suffix="&nbsp;%">100&nbsp;%</div>
-        <div class="label">gemeinnützig</div>
-        <div class="desc">Ausschließlich und unmittelbar dem Gemeinwohl.</div>
+<!-- ======================= AUFTRAG ======================= -->
+<section class="section">
+  <div class="wrap split top">
+    <div class="split-sticky">
+      <p class="over">Der Verein</p>
+      <h2 class="d2">
+        <span class="rise"><span>Ein Werk aus Worten —</span></span><br>
+        <span class="rise"><span>mitten in <span class="ac">Berlin</span>.</span></span>
+      </h2>
+      <p class="lead" style="margin-top:1.8rem;max-width:30ch">Wir sind der Zusammenschluss schreibender Menschen dieser Stadt — und ihr gemeinsames Sprachrohr.</p>
+      <p style="margin-top:1.6rem"><a class="arrow" href="ueber-uns.html">Mehr über uns <span class="dot"><i data-lucide="arrow-right"></i></span></a></p>
+    </div>
+    <div class="col-text reveal">
+      <p class="lead">Das Kulturwerk — Berliner Schriftstellerinnen und Schriftsteller e.V. gestaltet das literarische Leben der Hauptstadt mit: Wir fördern das Schreiben und Übersetzen, stärken Autor*innen in sozialen und rechtlichen Fragen und tragen Literatur dorthin, wo sie gehört wird — auf Bühnen, in Kieze, in die Debatte.</p>
+      <p>Als gemeinnütziger Verein verstehen wir uns als Haus für viele Stimmen: laut und leise, etabliert und beginnend, in jeder Sprache, die in Berlin geschrieben wird. Wir vernetzen, vermitteln und machen sichtbar — und arbeiten eng mit dem Verband deutscher Schriftsteller*innen (VS) und der Literaturszene der Stadt zusammen.</p>
+      <div class="img-reveal duo" style="aspect-ratio:16/10;margin-top:2rem;border-radius:1.2rem">
+        <img src="assets/img/hero-writing.jpg" alt="Handschrift mit Füllfeder">
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============================ PULL QUOTE ============================ -->
-<section class="section ink">
-  <div class="container">
-    <div class="pullquote reveal measure mx-auto">
-      <span class="mark" aria-hidden="true">&#8220;</span>
-      <blockquote>
-        Literatur ist die freieste Form der Verständigung — wir bewahren ihr den
-        <span class="shimmer">Raum</span>, in dem sie atmen kann.
-      </blockquote>
+<!-- ======================= STATS ======================= -->
+<section class="section tight ink">
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat reveal"><div class="num" data-count="150" data-suffix="+">0</div><div class="lab">Stimmen im Verein</div><div class="desc">Autor*innen &amp; Übersetzer*innen.</div></div>
+      <div class="stat reveal r1"><div class="num" data-count="48">0</div><div class="lab">Veranstaltungen / Jahr</div><div class="desc">Lesungen, Debatten, Werkstätten.</div></div>
+      <div class="stat reveal r2"><div class="num" data-count="12">0</div><div class="lab">Förderprojekte</div><div class="desc">Vom Debüt bis zur Übersetzung.</div></div>
+      <div class="stat reveal r3"><div class="num" data-count="100" data-suffix="%">0</div><div class="lab">gemeinnützig</div><div class="desc">Für die Literatur, nicht für Profit.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= PULL QUOTE ======================= -->
+<section class="section ink" style="padding-top:0">
+  <div class="wrap">
+    <div class="pq measure mx reveal">
+      <span class="mark" aria-hidden="true">„</span>
+      <blockquote>Eine Stadt ist so lebendig wie die <span class="ac">Geschichten</span>, die sie sich selbst erzählt.</blockquote>
       <cite>Aus dem Selbstverständnis des Kulturwerks</cite>
     </div>
   </div>
 </section>
 
-<!-- ============================ FEATURES ============================ -->
-<section class="section" id="was-wir-tun">
-  <div class="container">
-    <div class="center reveal" style="max-width:640px;margin-inline:auto;margin-bottom:64px">
-      <p class="eyebrow center">Was wir tun</p>
-      <h2 class="h-lg">Drei Wege, Literatur zu <span class="accent">tragen</span>.</h2>
+<!-- ======================= WAS WIR TUN ======================= -->
+<section class="section">
+  <div class="wrap">
+    <div class="center mx reveal" style="max-width:40ch;margin-bottom:3.5rem">
+      <p class="over center">Was wir tun</p>
+      <h2 class="d2">Drei Kräfte für die <span class="ac">Literatur</span>.</h2>
     </div>
     <div class="grid-3">
-      <article class="card tilt reveal d1">
-        <div class="icon-circle"><i data-lucide="feather"></i></div>
-        <h3>Literarisches Leben fördern</h3>
-        <p>Wir ermöglichen Lesungen, Projekte und Begegnungen — von der einzelnen
-        Autorenlesung bis zum großen Schriftsteller*innenkongress.</p>
-      </article>
-      <article class="card tilt reveal d2">
-        <div class="icon-circle"><i data-lucide="scale"></i></div>
-        <h3>Autor*innen zur Seite stehen</h3>
-        <p>In sozialen und rechtlichen Fragen unterstützen wir Schreibende und
-        Übersetzende — für faire Bedingungen und gesicherte Existenzen.</p>
-      </article>
-      <article class="card tilt reveal d3">
-        <div class="icon-circle"><i data-lucide="globe"></i></div>
-        <h3>Brücken zwischen Sprachen</h3>
-        <p>Wir pflegen internationale Literaturbeziehungen und fördern
-        Auslandsaufenthalte — im Dienst der Verständigung zwischen den Völkern.</p>
-      </article>
+      <article class="card c-orange reveal"><div class="ic"><i data-lucide="pen-tool"></i></div><h3>Fördern</h3><p>Wir unterstützen Autor*innen und Übersetzer*innen — mit Projekten, Stipendienimpulsen und Rat in sozialen wie rechtlichen Fragen.</p></article>
+      <article class="card c-purple reveal r1"><div class="ic"><i data-lucide="users"></i></div><h3>Vernetzen</h3><p>Wir verbinden die schreibende Stadt mit Verlagen, Bühnen, Bibliotheken und der Kulturpolitik — und miteinander.</p></article>
+      <article class="card c-blue reveal r2"><div class="ic"><i data-lucide="megaphone"></i></div><h3>Sichtbar machen</h3><p>Wir bringen Literatur auf die Bühne und in die Öffentlichkeit: Lesungen, Debatten und Begegnungen in ganz Berlin.</p></article>
     </div>
   </div>
 </section>
 
-<!-- ============================ INK DIVIDER ============================ -->
-<div class="container">
-  <div class="ink-divider" aria-hidden="true">
-    <svg viewBox="0 0 420 24" preserveAspectRatio="none">
-      <path pathLength="1" d="M0 12 H186 M234 12 H420"/>
-      <g class="dot"><path d="M210 4 l3.4 7.6 l7.6 3.4 l-7.6 3.4 l-3.4 7.6 l-3.4 -7.6 l-7.6 -3.4 l7.6 -3.4 Z" fill="var(--gold)" stroke="none"/></g>
-    </svg>
-  </div>
-</div>
-
-<!-- ============================ MARQUEE ============================ -->
-<section class="section tight ink marquee">
-  <div class="marquee-row r1" aria-hidden="true">
-    <span class="fill-gold">Lyrik</span><span class="diamond"></span>
-    <span class="outline">Prosa</span><span class="diamond"></span>
-    <span class="fill-gold">Essay</span><span class="diamond"></span>
-    <span class="outline">Übersetzung</span><span class="diamond"></span>
-    <span class="fill-gold">Lesung</span><span class="diamond"></span>
-    <span class="outline">Debatte</span><span class="diamond"></span>
-    <!-- Duplikat für nahtlose Schleife -->
-    <span class="fill-gold">Lyrik</span><span class="diamond"></span>
-    <span class="outline">Prosa</span><span class="diamond"></span>
-    <span class="fill-gold">Essay</span><span class="diamond"></span>
-    <span class="outline">Übersetzung</span><span class="diamond"></span>
-    <span class="fill-gold">Lesung</span><span class="diamond"></span>
-    <span class="outline">Debatte</span><span class="diamond"></span>
-  </div>
-  <div class="marquee-row r2" style="margin-top:12px" aria-hidden="true">
-    <span class="outline">Freiheit</span><span class="diamond"></span>
-    <span class="fill-gold">Verständigung</span><span class="diamond"></span>
-    <span class="outline">Kultur</span><span class="diamond"></span>
-    <span class="fill-gold">Sprache</span><span class="diamond"></span>
-    <span class="outline">Zukunft</span><span class="diamond"></span>
-    <span class="outline">Freiheit</span><span class="diamond"></span>
-    <span class="fill-gold">Verständigung</span><span class="diamond"></span>
-    <span class="outline">Kultur</span><span class="diamond"></span>
-    <span class="fill-gold">Sprache</span><span class="diamond"></span>
-    <span class="outline">Zukunft</span><span class="diamond"></span>
+<!-- ======================= MARQUEE ======================= -->
+<section class="ink marquee" aria-hidden="true">
+  <div class="marquee-row r-a" style="padding-block:2.2rem">
+    <span>Lyrik <i class="sep" style="background:var(--orange)"></i></span>
+    <span>Prosa <i class="sep" style="background:var(--purple)"></i></span>
+    <span>Essay <i class="sep" style="background:var(--blue)"></i></span>
+    <span>Übersetzung <i class="sep" style="background:var(--yellow)"></i></span>
+    <span>Debatte <i class="sep" style="background:var(--orange)"></i></span>
+    <span>Lesung <i class="sep" style="background:var(--purple)"></i></span>
+    <span>Lyrik <i class="sep" style="background:var(--orange)"></i></span>
+    <span>Prosa <i class="sep" style="background:var(--purple)"></i></span>
+    <span>Essay <i class="sep" style="background:var(--blue)"></i></span>
+    <span>Übersetzung <i class="sep" style="background:var(--yellow)"></i></span>
+    <span>Debatte <i class="sep" style="background:var(--orange)"></i></span>
+    <span>Lesung <i class="sep" style="background:var(--purple)"></i></span>
   </div>
 </section>
 
-<!-- ============================ CTA ============================ -->
+<!-- ======================= FÖRDERPROJEKTE TEASER ======================= -->
 <section class="section">
-  <div class="container cta reveal measure mx-auto">
-    <p class="eyebrow center">Mitwirken</p>
-    <h2 class="h-lg">Werden Sie Teil einer <span class="accent">literarischen</span> Gemeinschaft.</h2>
-    <p class="lead" style="margin:20px auto 34px;max-width:56ch">
-      Ob Autor*in, Übersetzer*in oder Freund*in der Literatur — Ihre
-      Unterstützung hält den Raum offen, in dem das geschriebene Wort lebt.
-    </p>
-    <div class="btns" style="justify-content:center">
-      <a href="kontakt.html" class="btn btn-primary"><i data-lucide="mail"></i> Kontakt aufnehmen</a>
-      <a href="foerderung.html" class="btn btn-ghost">Förderung entdecken <i data-lucide="arrow-right"></i></a>
+  <div class="wrap split">
+    <div class="img-reveal duo theme-purple" style="aspect-ratio:4/5;border-radius:1.4rem">
+      <img src="assets/img/ink.jpg" alt="Füllfeder und Tinte">
+    </div>
+    <div class="reveal">
+      <p class="over">Förderprojekte</p>
+      <h2 class="d2">Wir geben dem <span class="ac">ersten Satz</span> einen Ort.</h2>
+      <p class="lead" style="margin-top:1.6rem">Vom Debüt über die literarische Übersetzung bis zur Nachwuchswerkstatt: Unsere Förderprojekte schaffen Zeit, Raum und Öffentlichkeit zum Schreiben.</p>
+      <p>Jedes Projekt folgt derselben Überzeugung — dass Literatur Förderung verdient, nicht als Luxus, sondern als Teil des kulturellen Gedächtnisses einer Stadt.</p>
+      <p style="margin-top:1.6rem"><a class="arrow" href="foerderprojekte.html" style="--accent:var(--purple);--accent-ink:var(--purple-ink)">Projekte entdecken <span class="dot"><i data-lucide="arrow-right"></i></span></a></p>
     </div>
   </div>
 </section>
 
-<!-- ============================ FOOTER ============================ -->
+<!-- ======================= VERANSTALTUNGEN TEASER ======================= -->
+<section class="section tight paper-2 theme-yellow">
+  <div class="wrap">
+    <div class="split top" style="align-items:end;margin-bottom:2.5rem">
+      <div class="reveal">
+        <p class="over">Veranstaltungen</p>
+        <h2 class="d2">Literatur, die <span class="ac">stattfindet</span>.</h2>
+      </div>
+      <div class="reveal r1" style="justify-self:end"><a class="arrow" href="veranstaltungen.html">Alle Termine <span class="dot"><i data-lucide="arrow-right"></i></span></a></div>
+    </div>
+    <div class="events reveal r1">
+      <a class="event" href="veranstaltungen.html">
+        <div class="date">14<small>März</small></div>
+        <div class="ev-main"><h3>Lange Nacht der Berliner Literatur</h3><div class="meta">Lesung · Literaturhaus · 19:30</div></div>
+        <div class="ev-cta"><i data-lucide="arrow-up-right"></i></div>
+      </a>
+      <a class="event" href="veranstaltungen.html">
+        <div class="date">02<small>April</small></div>
+        <div class="ev-main"><h3>Werkstatt: Debüt &amp; Lektorat</h3><div class="meta">Workshop · Geschäftsstelle · 17:00</div></div>
+        <div class="ev-cta"><i data-lucide="arrow-up-right"></i></div>
+      </a>
+      <a class="event" href="veranstaltungen.html">
+        <div class="date">20<small>April</small></div>
+        <div class="ev-main"><h3>Übersetzen heißt Weiterschreiben</h3><div class="meta">Podium · Stadtbibliothek · 20:00</div></div>
+        <div class="ev-cta"><i data-lucide="arrow-up-right"></i></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= CTA ======================= -->
+<section class="section ink" style="position:relative;overflow:hidden">
+  <div class="wrap center mx measure reveal" style="position:relative;z-index:2">
+    <p class="over center">Mitwirken</p>
+    <h2 class="d2">Werden Sie <span class="ac">Fördermitglied</span>.</h2>
+    <p class="lead" style="margin:1.4rem auto 2.2rem;max-width:52ch;color:var(--on-ink-soft)">Mit Ihrer Mitgliedschaft halten Sie der Berliner Literatur den Rücken frei — und werden Teil einer lebendigen, streitbaren, schreibenden Gemeinschaft.</p>
+    <div class="btns" style="justify-content:center">
+      <a href="foerdermitglieder.html" class="btn btn-primary"><i data-lucide="heart"></i> Fördermitglied werden</a>
+      <a href="kontakt.html" class="btn">Kontakt aufnehmen <i data-lucide="arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= FOOTER ======================= -->
 <footer class="footer">
-  <div class="container">
+  <div class="wrap">
+    <div class="brand-line"></div>
     <div class="footer-grid">
       <div>
-        <a class="brand" href="index.html" style="margin-bottom:22px">
-          <svg class="mono" viewBox="0 0 92 108" fill="none" aria-hidden="true">
-            <text x="4"  y="46"  font-family="Cormorant Garamond, serif" font-weight="600" font-size="54" fill="#FAF7F1">K</text>
-            <text x="20" y="76"  font-family="Cormorant Garamond, serif" font-weight="600" font-size="54" fill="#FAF7F1">W</text>
-            <text x="38" y="104" font-family="Cormorant Garamond, serif" font-weight="600" font-size="54" fill="#FAF7F1">S</text>
-            <path d="M70 6 C 60 26, 52 46, 44 70" stroke="url(#f-quill)" stroke-width="3.4" stroke-linecap="round" fill="none"/>
-            <defs><linearGradient id="f-quill" x1="70" y1="6" x2="44" y2="70" gradientUnits="userSpaceOnUse"><stop stop-color="#C4A86E"/><stop offset="1" stop-color="#7E6534"/></linearGradient></defs>
-          </svg>
-          <span class="brand-text">
-            <span class="bt-1">Kulturwerk</span>
-            <span class="bt-2">der deutschen Schriftsteller*innen&nbsp;e.V.</span>
-          </span>
-        </a>
-        <p class="muted" style="max-width:38ch;color:rgba(250,247,241,.6);font-size:1rem">
-          Für das literarische Leben in Deutschland — und für die Literatur in der Welt.
-        </p>
+        <img class="f-logo" src="assets/brand/kulturwerk-weiss.png" alt="Kulturwerk">
+        <p style="max-width:34ch;color:var(--on-ink-soft)">Berliner Schriftstellerinnen und Schriftsteller e.V. — für das literarische Leben der Stadt.</p>
       </div>
       <div>
-        <h4>Navigation</h4>
+        <h4>Verein</h4>
         <ul>
-          <li><a href="index.html">Start</a></li>
-          <li><a href="verein.html">Der Verein</a></li>
-          <li><a href="foerderung.html">Förderung</a></li>
-          <li><a href="verein.html#vorstand">Vorstand</a></li>
-          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="ueber-uns.html">Über uns</a></li>
+          <li><a href="foerdermitglieder.html">Fördermitglieder</a></li>
+          <li><a href="foerderprojekte.html">Förderprojekte</a></li>
+          <li><a href="veranstaltungen.html">Veranstaltungen</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <ul>
+          <li><a href="kontakt.html">Nachricht senden</a></li>
+          <li><a href="kontakt.html">Presse</a></li>
+          <li><a href="foerdermitglieder.html">Mitglied werden</a></li>
         </ul>
       </div>
       <div>
         <h4>Verbund</h4>
         <ul>
-          <li><a href="https://vs.verdi.de/" target="_blank" rel="noopener">Verband deutscher Schriftsteller*innen</a></li>
-          <li><a href="https://www.verdi.de/kunst-kultur/literatur" target="_blank" rel="noopener">ver.di — Kunst & Kultur</a></li>
-          <li><a href="kontakt.html">Presse & Anfragen</a></li>
+          <li><a href="https://vs.verdi.de/" target="_blank" rel="noopener">VS in ver.di</a></li>
+          <li><a href="https://www.vgwort.de/" target="_blank" rel="noopener">VG Wort</a></li>
+          <li><a href="https://www.berlin.de/sen/kultur/" target="_blank" rel="noopener">Kultur Berlin</a></li>
         </ul>
       </div>
     </div>
-
-    <p class="footer-note">
-      <strong>Hinweis.</strong> Dieser Webauftritt ist ein gestalterisches
-      Konzept für das Kulturwerk der deutschen Schriftsteller*innen e.V. Die Inhalte
-      beruhen auf öffentlich zugänglichen Informationen zum Verein und zum
-      Verband deutscher Schriftsteller*innen (VS in ver.di). Namen aktueller
-      Vorstands­mitglieder und konkrete Kontaktdaten sind vor einer
-      Veröffentlichung mit dem Verein abzustimmen. Es handelt sich nicht um den
-      offiziellen Internetauftritt des Vereins.
-    </p>
-
-    <div class="footer-bottom">
-      <span>&copy; <span data-year>2026</span> Kulturwerk der deutschen Schriftsteller*innen e.V. — Konzept</span>
-      <span>Gemeinnütziger Verein · e.V.</span>
+    <p class="footer-note"><b>Hinweis.</b> Dieser Webauftritt ist ein gestalterisches Konzept für das Kulturwerk — Berliner Schriftstellerinnen und Schriftsteller e.V. Texte und Kennzahlen sind beispielhaft; Namen von Vorstand und Mitgliedern, Termine und Kontaktdaten sind vor einer Veröffentlichung mit dem Verein abzustimmen. Fotos: Unsplash. Es handelt sich nicht um den offiziellen Internetauftritt des Vereins.</p>
+    <div class="footer-bot">
+      <span>© <span data-year>2026</span> Kulturwerk — Berliner Schriftstellerinnen und Schriftsteller e.V.</span>
+      <span>Gemeinnütziger Verein · Berlin</span>
     </div>
   </div>
 </footer>
 
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" onerror="document.documentElement.classList.remove('intro')"></script>
 <script src="main.js"></script>
 </body>
 </html>

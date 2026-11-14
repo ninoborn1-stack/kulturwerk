@@ -1,28 +1,29 @@
-# Kulturwerk der deutschen Schriftsteller\*innen e.V. — Website
+# Kulturwerk — Berliner Schriftstellerinnen und Schriftsteller e.V.
 
-Mehrseitige, statische Website im „Editorial-Elegant"-Stil (reines HTML/CSS/JS,
-kein Build-Tool). Bildorientierter Hero mit animierter Architektur-Illustration
-(Aquarell-Sketch), literarische Typografie und dezente Scroll-Animationen.
+Mehrseitige, statische Website (HTML/CSS/JS, kein Build-Tool). Mutig & edel:
+Pinsel-/Spritzer-Identität, vier Markenfarben als System, literarische Typografie
+(Cormorant Garamond + DM Sans), volle Breite, ruhige Bewegung.
 
 ## Seiten
-- `index.html` — Startseite (Hero, Auftrag, Stats, Zitat, Förderfelder, Marquee, CTA)
-- `verein.html` — Der Verein: Auftrag, Geschichte-Timeline, Leitung & Vorstand
-- `foerderung.html` — Was das Kulturwerk fördert
-- `kontakt.html` — Kontaktformular (Formspree)
+- `index.html` — Start, mit Hero-Intro (Logo → Foto blüht durch Kreis auf → Farbspritzer)
+- `ueber-uns.html` — Über uns (Auftrag, Arbeit, Vorstand)
+- `foerdermitglieder.html` — Fördermitglieder (Vorteile, Stufen)
+- `foerderprojekte.html` — Förderprojekte (Stapelkarten)
+- `veranstaltungen.html` — Veranstaltungen (Formate, Termine)
+- `kontakt.html` — Kontakt (Formspree)
 
 ## Technik
-- Lucide Icons via CDN (keine Emojis)
-- Google Fonts: Cormorant Garamond, EB Garamond, Jost
-- Geteilt: `styles.css`, `main.js`
+- GSAP (CDN) für die Hero-Intro, IntersectionObserver für Reveals, Lucide Icons
+- Geteilt: `styles.css`, `main.js`; Assets in `assets/`
 - GitHub-Pages-tauglich (relative Pfade, `.nojekyll`)
+- `prefers-reduced-motion` wird respektiert; ohne JS bleibt der Endzustand sichtbar
 
-## Lokal starten
+## Lokal
 ```bash
 python3 -m http.server 8080
 ```
 
 ## Hinweis
-Gestalterisches Konzept auf Basis öffentlich zugänglicher Informationen zum
-Kulturwerk und zum Verband deutscher Schriftsteller\*innen (VS in ver.di).
-Namen aktueller Vorstandsmitglieder und konkrete Kontaktdaten sind vor einer
-Veröffentlichung mit dem Verein abzustimmen. Nicht der offizielle Internetauftritt.
+Gestalterisches Konzept. Texte, Kennzahlen, Termine und Kontaktdaten sind
+beispielhaft und vor einer Veröffentlichung mit dem Verein abzustimmen.
+Logos © Verein. Fotos: Unsplash. Nicht der offizielle Internetauftritt.
