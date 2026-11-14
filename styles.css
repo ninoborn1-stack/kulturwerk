@@ -260,6 +260,7 @@ html.intro .hero-shade{ opacity:0; }
 /* ---------- Feature cards ---------- */
 .grid-3{ display:grid; grid-template-columns:repeat(3,1fr); gap:1.6rem; }
 .grid-2{ display:grid; grid-template-columns:repeat(2,1fr); gap:1.6rem; }
+.grid-4{ display:grid; grid-template-columns:repeat(4,1fr); gap:1.4rem; }
 .card{ background:var(--card); border:1px solid var(--line); border-radius:1.2rem; padding:clamp(1.8rem,2.6vw,2.6rem);
   transition:transform .6s var(--ease), box-shadow .6s var(--ease), border-radius .6s var(--ease); }
 .card:hover{ transform:translateY(-4px); box-shadow:var(--shadow); border-radius:1.8rem; }
@@ -375,6 +376,7 @@ html.intro .hero-shade{ opacity:0; }
 @media (max-width:1080px){
   .split{ grid-template-columns:1fr; } .split-sticky{ position:static; }
   .stats{ grid-template-columns:repeat(2,1fr); row-gap:2.5rem; }
+  .grid-4{ grid-template-columns:repeat(2,1fr); }
   .stack-card{ grid-template-columns:1fr; } .stack-card .sc-media{ min-height:40vh; }
   .form-grid{ grid-template-columns:1fr; }
   .footer-grid{ grid-template-columns:1fr 1fr; }
@@ -387,7 +389,7 @@ html.intro .hero-shade{ opacity:0; }
   .menu a::after{ height:3px; }
   .menu .btn{ font-family:var(--sans); font-size:.9rem; }
   .burger{ display:block; }
-  .grid-3,.grid-2,.people{ grid-template-columns:1fr; }
+  .grid-3,.grid-2,.grid-4,.people{ grid-template-columns:1fr; }
   .event{ grid-template-columns:auto 1fr; } .event .ev-cta{ display:none; }
   .hero-foot .tags{ display:none; }
 }
